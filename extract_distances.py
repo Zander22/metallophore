@@ -1,9 +1,10 @@
+# Start of get_report (1).py content
 import sqlite3
 import pandas as pd
 import os
 
 # Connect to the "Sp. Report" database
-conn2 = sqlite3.connect("full_run_result/reports/9/data.db") # a specific report
+conn2 = sqlite3.connect("reports/9/data.db") # a specific report
 
 # Extract data from gcf_membership, bgc, and bgc_class tables
 gcf_membership_df = pd.read_sql_query('SELECT * FROM gcf_membership', conn2)
@@ -29,7 +30,10 @@ conn2.close()
 
 print("Merged table has been exported to merged_table.txt!")
 
+# End of get_report (1).py content
 
+
+# Start of extract3.py content
 
 
 from Bio import SeqIO
@@ -56,11 +60,11 @@ def extract_all_products_from_gbk(directory):
     return results
 
 if __name__ == '__main__':
-    if True:
-        print("Usage: python extract_products.py <input_directory>")
-        sys.exit(1)
+    
     directory = "./example_input/"
     results = extract_all_products_from_gbk(directory)
     output_filename = "products.tsv"
     results_df = pd.DataFrame(results, columns=["Filename", "Product"])
     results_df.to_csv(output_filename, sep='\t', index=False)
+
+# End of extract3.py content
