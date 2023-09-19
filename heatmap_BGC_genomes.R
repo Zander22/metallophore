@@ -29,5 +29,5 @@ pheatmap(presence_absence,
          clustering_distance_cols = "euclidean",
          clustering_method = "complete")
 
-ggsave("heatmap.pdf", width=10, height=6)  
+
 
