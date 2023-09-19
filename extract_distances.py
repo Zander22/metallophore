@@ -19,7 +19,7 @@ merged_df = gcf_membership_df.merge(bgc_df, left_on='bgc_id', right_on='id', how
 merged_df = merged_df.merge(bgc_class_df, on='bgc_id', how='inner')
 
 # Create an export directory if it doesn't exist
-export_dir_Sp_Report = "exported_full_tables_Sp_Report"
+export_dir_Sp_Report = ""
 os.makedirs(export_dir_Sp_Report, exist_ok=True)
 
 # Export the merged table to a .txt (TSV) file
