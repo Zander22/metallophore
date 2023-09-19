@@ -1,6 +1,7 @@
 
 
 library(dplyr)
+library(ggplot2)
 
 # Read the data files
 products <- read.table("products.tsv", header = TRUE, sep = "\t", stringsAsFactors = FALSE)
@@ -72,4 +73,4 @@ plot <- combined_data %>% ggplot(aes(x = Filename, y = membership_value)) +
 
 print(plot)
   
-  
+ggsave("distance_plot.png", width=10, height=6)  
