@@ -2,7 +2,7 @@
 data <- read.csv("BGC_counts.tsv", sep="\t")
 
 # Load required libraries
-install.packages("reshape2")
+install.packages("reshape2", repos="https://cloud.r-project.org/")
 library(ggplot2)
 library(reshape2)
 library(dplyr)
