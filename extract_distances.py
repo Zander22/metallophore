@@ -4,7 +4,7 @@ import pandas as pd
 import os
 
 # Connect to the "Sp. Report" database
-conn2 = sqlite3.connect("reports/9/data.db") # a specific report
+conn2 = sqlite3.connect("full_run_result/reports/9/data.db") # a specific report
 
 # Extract data from gcf_membership, bgc, and bgc_class tables
 gcf_membership_df = pd.read_sql_query('SELECT * FROM gcf_membership', conn2)
